@@ -31,7 +31,7 @@ a:hover {
 body {
     font-family: var(--font-family);
     background-color: var(--bg-color);
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 /* navigation section */
@@ -43,7 +43,9 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 3rem;
+    padding: 2rem 2rem;
+    margin-left: 50px;
+    margin-right: 50px;
     background-color: var(--bg-color);
     box-shadow: 0 10px 10px rgb(3, 3, 3);
 }
@@ -218,6 +220,7 @@ nav ul li {
 
 .work-container p {
     padding: 0.4rem;
+    font-weight: bolder;
 }
 
 .work-container:first-child {
@@ -230,29 +233,11 @@ nav ul li {
     flex: 1;
 }
 
-.work-title {
-    margin-bottom: var(--bottom-margin);
-}
-
 .work-image {
     padding: 1rem;
     border-radius: 5%;
     max-width: 100%;
     height: auto;
-}
-.work-details {
-    margin-bottom: var(--bottom-margin);
-    position: absolute;
-    bottom: 75px;
-    right: 75px;
-    background-color: var(--secondary-color);
-    color: white;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-.work-details p {
-    font-size: 2rem;
 }
   
 .work-card {
@@ -303,4 +288,16 @@ nav ul li {
     .main-contact-container {
       flex-direction: column;
     }
+}
+
+/* footer */
+
+.footer {
+    margin-top: 2rem;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: var(--color);
+    background-color: var(--bg-color);
+    text-align: right;
+    font-size: smaller;
 }
