@@ -7,7 +7,7 @@
     --primary-shadow: #a590a5;
     --secondary-shadow: #b498b9;
     --bottom-margin: 1rem;
-    --line-height: 2rem;
+    --line-height: 1.8rem;
     --default-align: center;
 }
 
@@ -30,8 +30,10 @@ a:hover {
 body {
     font-family: var(--font-family);
     background-color: var(--bg-color);
+    font-size: 16px;
 }
 
+/* navigation section */
 nav {
     position: sticky;
     top: 0;
@@ -40,13 +42,15 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 3.5rem;
+    padding: 2rem 3rem;
     background-color: var(--bg-color);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 10px rgb(3, 3, 3);
 }
 
 nav h1 {
     color: var(--color);
+    font-size: 34px;
+    font-weight: bolder;
   }
   
 nav a {
@@ -69,24 +73,29 @@ nav ul li {
 /* hero section */
 .hero {
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: center;
     gap: 2.5rem;
-    max-width: 68.75rem;
-    margin: 2rem;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 30px;
 }
 
-.hero img {
-    max-width: 25%;
+.hero-img {
+    flex: 1 1 auto;
+    max-width: 30%;
     height: auto;
     border-radius: 50%;
+    overflow: hidden;
   }
 
 /* text box next to image */
 .intro-box {
-    width: 25rem;
+    flex: 1 1 auto;
+    width: 30rem;
     padding: 0.625rem;
-    border-radius: 6px;
+    border-radius: 5px;
     box-shadow: 0px 5px 20px 5px var(--primary-shadow);
     background-color: var(--color);
     text-align: left;
@@ -94,19 +103,23 @@ nav ul li {
   
 .intro-box h2 {
     margin-bottom: var(--bottom-margin);
-    font-weight: var(--bolder-font);
+    font-weight: bolder;
+    text-align: center;
 }
   
 .intro-box p {
     line-height: var(--line-height);
-    padding: 0.3rem 0;
+    padding: 0.75rem;
 }
 
-/* text box next to image */
+/* about me section */
 .about {
+    margin-top: 2rem;
+    margin-left: 125px;
+    margin-right: 125px;
     color: var(--color);
     background-color: var(--bg-color);
-    padding: 1rem 6rem;
+    align-content: center;
 }
   
 .about h2 {
@@ -150,23 +163,20 @@ nav ul li {
   
 .skills-title {
     margin-bottom: var(--bottom-margin);
+    font-weight: bolder;
 }
   
 .skills-card {
     flex: 0 1 auto;
     background-color: var(--color);
-    border-radius: 11px;
-    box-shadow: 0 3px 10px var(--primary-shadow);
+    border-radius: 10px;
+    box-shadow: 0 10px 10px var(--primary-shadow);
     padding: 20px;
-    margin: 10px;
+    margin: 20px;
 }
 
 #icon {
     color: var(--primary-color);
-}
-
-#icon:hover {
-    color: var(--secondary-color);
 }
 
 @media (max-width: 800px) {
@@ -179,8 +189,8 @@ nav ul li {
     background-color: var(--bg-color);
     padding: 32px 0;
     margin-top: 2rem;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 125px;
+    margin-right: 125px;
 }
   
 .main-work-container {
@@ -222,38 +232,40 @@ nav ul li {
 
 .work-image {
     padding: 1rem;
+    border-radius: 5%;
     max-width: 100%;
     height: auto;
 }
 .work-details {
     margin-bottom: var(--bottom-margin);
     position: absolute;
-    bottom: 50px;
-    right: 50px;
-    background-color: var(--primary-shadow);
+    bottom: 75px;
+    right: 75px;
+    background-color: var(--secondary-color);
     color: white;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.work-details p {
+    font-size: 2rem;
 }
   
 .work-card {
     background-color: #fff;
     border-radius: 11px;
-    box-shadow: 0 3px 10px var(--primary-shadow);
-    padding: 20px;
-    margin: 10px;
+    box-shadow: 0 10px 10px var(--primary-shadow);
+    margin: 20px;
 }
 
 /* contact section */
 .contact {
     background-color: var(--bg-color);
-    padding: 32px 0;
-    margin-top: 2rem;
 }
   
 .main-contact-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: center;
 }
@@ -266,24 +278,7 @@ nav ul li {
   
 .contact-container {
     text-align: center;
-    width: 21.875rem;
-    padding: 1rem;
-}
-  
-.contact-title {
-    margin-bottom: var(--bottom-margin);
-}
-  
-.contact-details {
-    margin-bottom: var(--bottom-margin);
-}
-  
-.contact-card {
-    background-color: #fff;
-    border-radius: 11px;
-    box-shadow: 0 3px 10px var(--primary-shadow);
-    padding: 20px;
-    margin: 10px;
+    padding: 1.75rem;
 }
 
 .contact-card a {
@@ -291,8 +286,13 @@ nav ul li {
 }
 
 .contact-card a:hover {
-    width: 36px;
-    height: 36px;
+    opacity: 0.7;
+}
+
+/* custom styling for all icons */
+.fa-solid, .fa-brands {
+  	text-align: center;
+  	text-decoration: none;
 }
 
 @media (max-width: 800px) {
