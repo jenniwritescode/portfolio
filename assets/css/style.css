@@ -236,7 +236,7 @@ nav ul li {
 .work-image {
     padding: 1rem;
     border-radius: 5%;
-    max-width: 100%;
+    max-width: 400px;
     height: auto;
 }
   
